@@ -1,11 +1,10 @@
 pipeline {
   agent any
-  stages{
-    stage('groovy practice') {
-      steps{
-        echo 'Hello groovy'
-      }
-    }
+  stages {
+      stage('Groovy practice'){
+       steps {
+        echo("I am learning Jenkins")
+             }
+  }
   }
 }
-    
