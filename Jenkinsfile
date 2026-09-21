@@ -5,7 +5,10 @@ pipeline {
        steps {
          script {
            def tool = "Jenkins"
-        echo("I am learning $tool")
+           def environment = "Development"
+           def version = 1.0
+        echo("I am learning $tool practicing in $enviroment with $version" )
+         
              }
   }
   }
