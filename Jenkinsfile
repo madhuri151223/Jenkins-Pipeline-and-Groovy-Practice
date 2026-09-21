@@ -7,7 +7,7 @@ pipeline {
            def tool = "Jenkins"
            def environment = "Development"
            def version = 1.0
-        echo("I am learning $tool practicing in $enviroment with $version" )
+        echo("I am learning $tool practicing in $environment with $version" )
          
              }
   }
