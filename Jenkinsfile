@@ -3,8 +3,11 @@ pipeline {
   stages {
       stage('Groovy practice'){
        steps {
-        echo("I am learning Jenkins")
+         script {
+           def tool = "Jenkins"
+        echo("I am learning $tool")
              }
   }
   }
+}
 }
