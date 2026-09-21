@@ -5,7 +5,7 @@ pipeline {
        steps {
          script {
            def tool = "Jenkins"
-        echo("I am learning $tool")
+        echo("I am learning $tools")
              }
   }
   }
