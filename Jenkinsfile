@@ -4,7 +4,7 @@ pipeline{
   stages {
     stage ('Groovy Practice')
      steps {
-       script {
+     script {
          def tool = "Jenkins"
          def environment = "Production"
          if (environment == "development") {
