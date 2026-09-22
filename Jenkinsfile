@@ -11,7 +11,7 @@ pipeline{
          if (environment == "development") {
            echo("aadhya")
          }
-         else echo("failed")
+         else echo("YUvanyashnaaadhya")
          echo("learn $tool in $environment with $version")
        }
      }
