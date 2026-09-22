@@ -1,20 +1,28 @@
-pipeline {
-  agent any
+
+pipeline{
+  agent any 
   stages {
-      stage('Groovy practice'){
-       steps {
-         script {
-           def tool = "Jenkins"
-          
-           def environment = "Development"
-           if (environment == "Development") {
-            echo("hello world")
-            }
-           def version = 1.0
-        echo("I am learning $tool practicing in $environment with $version" )
+    stage ('Groovy Practice')
+     steps {
+       script {
+         def tool = "Jenkins"
+         def environment = "Production"
+         if (environment == "development") {
+           echo("aadhya")
+         }
+         def version = 2.0
+         echo("learn $tool in $environment with $version")
+       }
+     }
+  }
+}
+
+
+
+
+
+
          
-             }
-  }
-  }
-}
-}
+           
+         def version = 2.0
+    
