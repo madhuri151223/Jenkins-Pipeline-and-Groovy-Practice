@@ -8,7 +8,7 @@ pipeline{
          def tool = "Jenkins"
          def environment = "Production"
          def version = 2.0
-         if (environment == "Production") {
+         if (environment == "development") {
            echo("aadhya")
          }
          else echo("failed")
