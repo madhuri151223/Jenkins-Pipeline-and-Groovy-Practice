@@ -6,13 +6,17 @@ pipeline{
      steps {
      script {
          def tool = "Jenkins"
-         def environment = "Production"
+         def environment = "QA"
          def version = 2.0
-         if (environment == "Production") {
-           echo("Deploying application to Production")
+         if (environment == "Development") {
+           echo("Deploying to Development")
          }
-         else echo("Skipping Production deployment")
-        
+         else if (environment == "QA") {
+           echo("Deploying to QA")
+         }
+          else if (environment == "Production") {
+            echo("Production requires manual approval")   
+          }
        }
      }
   }
