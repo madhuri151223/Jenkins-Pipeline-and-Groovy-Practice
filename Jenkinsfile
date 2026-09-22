@@ -11,7 +11,7 @@ pipeline{
          if (environment == "Production") {
            echo("aadhya")
          }
-         
+         else echo("failed")
          echo("learn $tool in $environment with $version")
        }
      }
@@ -26,5 +26,5 @@ pipeline{
 
          
            
-         def version = 2.0
+
     
