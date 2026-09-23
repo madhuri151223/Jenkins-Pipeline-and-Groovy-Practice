@@ -8,13 +8,13 @@ pipeline{
          def tool = "Jenkins"
          def environments = [ "Development", "QA", "Production" ]
          def version = 2.0
-         if (environment == "Development") {
+         if (environments == "Development") {
            echo("Deploying to Development")
          }
-         else if (environment == "QA") {
+         else if (environments == "QA") {
            echo("Deploying to QA")
          }
-          else if (environment == "Production") {
+          else if (environments == "Production") {
             echo("Production requires manual approval")   
           }
        }
