@@ -11,15 +11,16 @@ pipeline{
        echo "${environments[0]}"
        echo "${environments[1]}"
        echo "${environments[2]}"
+      
        for ( environment in environments ) {
-         if (environments == "Development") {
+         if (environment == "Development") {
            echo("Deploying to Development")
          }
        
-         else if (environments == "QA") {
+         else if (environment == "QA") {
            echo("Deploying to QA")
          }
-          else if (environments == "Production") {
+          else if (environment == "Production") {
             echo("Production requires manual approval")   
           }
        }
