@@ -9,6 +9,8 @@ pipeline{
          def environments = [ "Development", "QA", "Production" ]
          def version = 2.0
        echo "${environments[0]}"
+       echo "${environments[1]}"
+       echo "${environments[2]}"
          if (environments == "Development") {
            echo("Deploying to Development")
          }
