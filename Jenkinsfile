@@ -6,7 +6,7 @@ pipeline{
      steps {
      script {
          def tool = "Jenkins"
-         def environment = "QA"
+         def environments = [ "Development", "QA", "Production"]
          def version = 2.0
          if (environment == "Development") {
            echo("Deploying to Development")
