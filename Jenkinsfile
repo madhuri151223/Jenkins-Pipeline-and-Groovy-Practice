@@ -8,6 +8,7 @@ pipeline{
          def tool = "Jenkins"
          def environments = [ "Development", "QA", "Production" ]
          def version = 2.0
+       echo "${environments[0]}"
          if (environments == "Development") {
            echo("Deploying to Development")
          }
