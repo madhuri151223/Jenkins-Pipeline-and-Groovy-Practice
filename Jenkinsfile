@@ -8,6 +8,12 @@ pipeline{
          def tool = "Jenkins"
          def environments = [ "Development", "QA", "Production" ]
          def version = 2.0
+         def servers = [
+             Development : "dev-server" ,  
+             QA : "qa-server" ,
+             Production : "prod-server" ]  
+       servers.each { environment, server ->
+    echo "$environment is $server" } 
        echo "${environments[0]}"
        echo "${environments[1]}"
        echo "${environments[2]}"
