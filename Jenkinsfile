@@ -7,11 +7,15 @@ pipeline{
      script {
          def tool = "Jenkins"
          def services = [ "payment-service",
-    "order-service",
-    "user-service"
-]
+                          "order-service",
+                          "user-service"
+                        ]
+         def DeployEnvironments = [ "Development",
+                                    "QA"
+                                  ]
        for ( service in services ) {
-       echo " building ${service} "
+         for ( DeployEnvironment in DeployEnvironments ) {
+       echo " Deploying ${service} to ${DeployEnvironment} "
        }
 
 // YOUR CODE
