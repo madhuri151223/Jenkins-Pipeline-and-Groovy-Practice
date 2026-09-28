@@ -18,6 +18,8 @@ pipeline{
        echo " Deploying ${service} to ${DeployEnvironment} "
        }
 
+       }
+
 // YOUR CODE
          def environments = [ "Development", "QA", "Production" ]
          def version = 2.0
