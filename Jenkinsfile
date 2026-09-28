@@ -11,7 +11,7 @@ pipeline{
     "user-service"
 ]
        for ( service in services ) {
-       echo " building $(service) "
+       echo " building ${service} "
        }
 
 // YOUR CODE
