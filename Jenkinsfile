@@ -6,6 +6,15 @@ pipeline{
      steps {
      script {
          def tool = "Jenkins"
+         def services = [ "payment-service",
+    "order-service",
+    "user-service"
+]
+       for ( service in services ) {
+       echo " building $(service) "
+       }
+
+// YOUR CODE
          def environments = [ "Development", "QA", "Production" ]
          def version = 2.0
          def servers = [
