@@ -11,11 +11,16 @@ pipeline{
                           "user-service"
                         ]
          def DeployEnvironments = [ "Development",
-                                    "QA"
+                                    "QA",
+                                    "Production", 
+                                    "DR"
                                   ]
        for ( service in services ) {
          for ( DeployEnvironment in DeployEnvironments ) {
-       echo " Deploying ${service} to ${DeployEnvironment} "
+    if ( DeployEnvironments == "Production" )
+           echo ( "Production reached - stopping loop" )
+           break 
+            echo "Deploying to ${environment}"
        }
 
        }
