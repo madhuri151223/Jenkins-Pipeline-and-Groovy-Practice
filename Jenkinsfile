@@ -17,7 +17,7 @@ pipeline{
                                   ]
        for ( service in services ) {
          for ( DeployEnvironment in DeployEnvironments ) {
-    if ( DeployEnvironments == "Production" )
+    if ( DeployEnvironment == "Production" ) {
            echo ( "Production reached - stopping loop" )
            break 
             echo "Deploying to ${environment}"
