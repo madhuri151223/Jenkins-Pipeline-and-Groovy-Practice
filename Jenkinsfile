@@ -15,15 +15,17 @@ pipeline{
                                     "Production", 
                                     "DR"
                                   ]
+       def deployApp(service, DeployEnvironment) {
+         echo "deploying ${service} to ${DeployEnvironment}"
+       }
+       
        for ( service in services ) {
          for ( DeployEnvironment in DeployEnvironments ) {
-    if ( DeployEnvironment == "Production" ) {
-           echo ( "Production reached - stopping loop" )
-           continue 
+    deployApp(service, DeployEnvironment)
            
        }
-            echo "Deploying to ${DeployEnvironment}"
-         }
+           
+         
        }
 
 // YOUR CODE
