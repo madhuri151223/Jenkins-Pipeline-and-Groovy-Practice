@@ -15,7 +15,7 @@ pipeline{
                                     "Production", 
                                     "DR"
                                   ]
-       def deployApp(service, DeployEnvironment) {
+       def deployApp=(service, DeployEnvironment) {
          echo "deploying ${service} to ${DeployEnvironment}"
        }
        
