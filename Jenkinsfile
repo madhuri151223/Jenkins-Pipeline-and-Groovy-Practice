@@ -19,7 +19,7 @@ pipeline{
          for ( DeployEnvironment in DeployEnvironments ) {
     if ( DeployEnvironment == "Production" ) {
            echo ( "Production reached - stopping loop" )
-           break 
+           continue 
            
        }
             echo "Deploying to ${DeployEnvironment}"
